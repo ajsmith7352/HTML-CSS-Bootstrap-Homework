@@ -1,13 +1,128 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Max Temperature</title>
+  <title>Weather Data Visualization</title>
+    
    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body> 
     <div class="container-fluid">
-        <h1><strong>Latitude</strong></h1>
+        <h1><strong>Weather Data and Visualization</strong></h1>
+            <p><em>As Presented by Andrew Smith</em></p>
+    </div>
+</body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data target="mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><strong>MENU</strong></a>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav">
+                <li class= "active"><a href="#">LATITUDE</a></li> 
+                <li><a href="#">DATA</a></li>
+                <li><a href="#">COMPARISONS</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLOTS <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MaxTemp.html" target="_black">MAX TEMPERATURE</a></li>
+                        <li><a href="humidity.html" target="_blank">HUMIDITY</a></li>
+                        <li><a href="cloudiness" target="_blank">CLOUDINESS</a></li>
+                        <li><a href="WindSpeed.html" target="_blank">WIND SPEED</a></li>
+                    </ul>
+                </li>     
+            </ul>
+        </div>
+    </div>
+</nav>  
+<div class="container">
+                <div class="row row-grid">
+                    
+                    <div class="col-md-8">
+                        <div class="box box-left">
+                        <section id="intro">
+                            <h1>LATTITUDE VS. HUMIDITY</h1>
+                            <hr>
+                            <figure>
+                                        <a target="_blank" href="Fig1.png">
+                                            <img id="viz-main" src="Fig1.png" alt="Latitude vs. Max Temperature">
+                                        </a>
+                            </figure>
+                            
+                            <section id="summary">
+                            <p>Humidity does not show a strong correlation to latitude. The visualization shows a great variety of
+                    humidity percentages at different latitudes. Therefore, we cannot conclude that there is a conclusive
+                    pattern between humidity and latitude.</p>
+                            </section>
+        
+                        </section>
+                        </div>
+                    </div>
+                
+                   
+                    <div class="col-md-4">
+                        <div class="box box-right">
+                        <h2>Visualizations</h2>
+                        <hr>
+        
+                   
+                      <div class="row">
+                            <div class="col-xs-6 col-sm-3 col-md-6">
+                                  <figure>
+                                      <a href="MaxTemp.html">
+                                          <img id="landing-viz" src="Fig1.png" alt="Latitude vs. Temperature">
+                                      </a>
+                                  </figure>
+                              </div>
+                          
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="humidity.html">
+                                        <img id="landing-viz" src="Fig2.png" alt="Latitude vs. Humidity">
+                                    </a>
+                                </figure>
+                            </div>
+      
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="cloudiness.html">
+                                        <img id="landing-viz" src="Fig3.png" alt="Latitude vs. Cloudiness">
+                                    </a>
+                                </figure>
+                            </div>
+      
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="WingSpeed.html">
+                                        <img id="landing-viz" src="Fig4.png" alt="Latitude vs. Wind Speed">
+                                    </a>
+                                </figure>
+                            </div>
+        
+                            </div>
+                        </div>
+                      </div>
+                          
+                    </div>
+                </div>
+        
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>      
+    </body>
+</html>
