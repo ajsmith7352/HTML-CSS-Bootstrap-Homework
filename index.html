@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Weather Data Visualization</title>
+    
    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body> 
     <div class="container-fluid">
@@ -18,22 +21,100 @@
     <div class="container-fluid">
         
         <div class="navbar-header">
-            <a href="#" class="navbar-brand">NAVBAR-ELITE</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data target="mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><strong>MENU</strong></a>
         </div>
-        <div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
             <ul class="nav navbar-nav">
-                <li class= "active"><a href="#">HOME</a></li> 
+                <li class= "active"><a href="#">LATITUDE</a></li> 
                 <li><a href="#">DATA</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">VISUALIZATIONS<span class="caret"></span></a>
-                    
-                </li>     
                 <li><a href="#">COMPARISONS</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">PLOTS <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MaxTemp.html" target="_black">MAX TEMPERATURE</a></li>
+                        <li><a href="humidity.html" target="_blank">HUMIDITY</a></li>
+                        <li><a href="cloudiness" target="_blank">CLOUDINESS</a></li>
+                        <li><a href="WindSpeed.html" target="_blank">WIND SPEED</a></li>
+                    </ul>
+                </li>     
             </ul>
         </div>
     </div>
 </nav>  
+<div class="container"> 
+    <div class="row">
+        <div class="col-lg-7 col-md-12">
+            <!-- Left box  -->
+            <div class="box">
+                <h3 class="title">Summary: Latitude vs. X</h3>
+                <hr>
+                <img src="Resources/assets/images/Fig1.png" class="vizualization rounded float-left" alt="Max Temperature Graph">
+                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To
+                    accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over
+                    500 cities.</p>
+                <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
+                    Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the
+                    source data and visualizations created as part of the analysis, as well as explanations and descriptions of
+                    any trends and correlations witnessed.</p>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-12">
+            <!-- Right Box -->
+            <div class="box">
+                <h5 class="title">Visualizations</h5>
+                <hr>
 
 
+                <div class="container">
+                    <div class="row" style="padding-bottom: 30px;">
+                        <div class="col-6">
+                            <a href="temp.html">
+                                <img class="panel" src="Resources/assets/images/Fig1.png" alt="Max Temperature Image">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="humidity.html">
+                                <img class="panel" src="Resources/assets/images/Fig2.png" alt="Humidity Graph">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding-bottom: 30px;">
+                        <div class="col-6">
+                            <a href="cloudiness.html">
+                                <img class="panel" src="Resources/assets/images/Fig3.png" alt="Cloudiness Graph">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="wspeed.html">
+                                <img class="panel" src="Resources/assets/images/Fig4.png" alt="Wind Speed Graph">
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
 
 </html>
